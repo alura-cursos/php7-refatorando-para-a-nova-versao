@@ -1,15 +1,11 @@
 <?php
 namespace Vendor\Controller;
 
-use Vendor\Model\Postagem;
-use Vendor\Model\Usuario;
-use Vendor\DAO\PostagemDAO;
-use Vendor\DAO\UsuarioDAO;
-use Vendor\Model\Noticia;
-use Vendor\Model\Login;
+use Vendor\Model\{Postagem,Usuario};
+use Vendor\DAO\{PostagemDAO,UsuarioDAO};
+use Vendor\Model\{Noticia,Login};
 use Vendor\Factory\ConnectionFactory;
-use Vendor\Lib\View;
-use Vendor\Lib\UsuarioValidator;
+use Vendor\Lib\{View,UsuarioValidator};
 
 class IndexController{
 	private $postagemDao;
@@ -27,6 +23,7 @@ class IndexController{
 		$usuarioId = $_GET["usuarioId"];
 		if(Login::usuarioEstaLogado() && $_SESSION["usuario_logado"]->getId() == $usuarioId){
 			$postagens = $this->postagemDao->lista($usuarioId);
+
 			$postsPorSemana = $this->postagemDao->postsPorSemana($usuarioId);
 
 			$view = new View('index','Postagem');
@@ -98,7 +95,6 @@ class IndexController{
 			$postagem->setId($postId);
 
 			$this->postagemDao->altera($postagem);
-
 			header("Location: index.php?c=Index&m=index&usuarioId=".$usuarioId);
 		}
 		else{

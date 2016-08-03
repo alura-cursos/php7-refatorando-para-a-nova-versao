@@ -1,17 +1,9 @@
 <?php 
 	
-	if(!isset($viewBag['error'])){
-	$error = '';
-	}
-	else{
-	$error = $viewBag['error'];
-	}
-	if(!isset($viewBag['register'])){
-	$register = '';
-	}
-	else{
-	$register = $viewBag['register'];
-	}
+	$error = $viewBag['error'] ?? "";
+	
+	$register = $viewBag['register'] ?? "";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +11,7 @@
 		<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
         <link rel="stylesheet" href="Vendor/View/CSS/login-index.css">
   </head>
-<body>
+  <body>
 	<section class="form-module login">
 	  <div class="form">
 	    <h2>Entre no seu mini-blog!</h2>
