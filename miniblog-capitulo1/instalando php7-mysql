@@ -1,0 +1,23 @@
+Linux:
+
+sudo apt-get install php7.0 php7.0-fpm php7.0-mysql -y
+
+sudo apt-get intall mysql-server mysql-client
+
+Mac:
+
+curl -s http://php-osx.liip.ch/install.sh | bash -s 7.0
+
+Windows:
+
+http://windows.php.net/download/
+
+Banco de dados miniblog:
+
+mysql -u root
+
+create database miniblog
+
+exit
+
+mysql -u root miniblog < miniblog.sql
