@@ -65,7 +65,7 @@ CREATE TABLE `Usuario` (
 
 LOCK TABLES `Usuario` WRITE;
 /*!40000 ALTER TABLE `Usuario` DISABLE KEYS */;
-INSERT INTO `Usuario` VALUES (1,'andre chaves','873816684df9e979e1d3e1b23f0c0ab7','miniblog@miniblog.com','Semeador da lamentaÃ§Ã£o!','2016-05-17');
+INSERT INTO `Usuario` VALUES (1,'andre chaves','827ccb0eea8a706c4c34a16891f84e7b','miniblog@miniblog.com','Semeador da lamentaÃ§Ã£o!','2016-05-17');
 /*!40000 ALTER TABLE `Usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
