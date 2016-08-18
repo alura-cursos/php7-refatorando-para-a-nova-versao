@@ -6,7 +6,7 @@ use Vendor\DAO\UsuarioDAO;
 
 class PostagemDAO{
 	private $con;
-	private $UsuarioDao;
+	private $usuarioDao;
 
 	public function __construct($con){
 		$this->con = $con;
